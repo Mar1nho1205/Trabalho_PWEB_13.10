@@ -53,8 +53,8 @@ src/
 | Entidade | Campos |
 |---|---|
 | **Usuario** | id, nome, email (único) |
-| **Endereco** | id, rua, numero, cidade, estado, usuarioId |
-| **Ordem** | id, descricao, valor, usuarioId |
+| **Endereco** | id, rua, numero, cidade, estado, idUsuario |
+| **Ordem** | id, descricao, valor, idUsuario |
 
 **Relacionamentos (1:N):**
 - Um **Usuario** possui vários **Enderecos**.
