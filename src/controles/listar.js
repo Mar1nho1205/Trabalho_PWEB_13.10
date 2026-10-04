@@ -3,7 +3,10 @@ const { Usuario, Endereco, Ordem } = require('../models');
 exports.listarUsuarios = async (req, res) => {
     try {
         const usuarios = await Usuario.findAll({
-            include: [Endereco, Ordem]
+            include: [
+                { model: Endereco, as: 'endereços' },
+                { model: Ordem, as: 'Ordens'}
+            ]
         });
         return res.status(200).json(usuarios);
     } catch (error) {
@@ -14,7 +17,9 @@ exports.listarUsuarios = async (req, res) => {
 exports.listarEnderecos = async (req, res) => {
     try {
         const enderecos = await Endereco.findAll({
-            include: [Usuario]
+            include: [
+                { model: Usuario, as: 'Usuário' }
+            ]
         });
         return res.status(200).json(enderecos);
     } catch (error) {
@@ -25,7 +30,9 @@ exports.listarEnderecos = async (req, res) => {
 exports.listarOrdens = async (req, res) => {
     try {
         const ordens = await Ordem.findAll({
-            include: [Usuario]
+            include: [
+                { model: Usuario, as: 'Usuário' }
+            ]
         });
         return res.status(200).json(ordens);
     } catch (error) {
