@@ -29,7 +29,7 @@ exports.atualizarEndereco = async (req, res) => {
         await endereco.update(dadosNovos);
         return res.status(200).json({ mensagem: 'Endereço atualizado com sucesso!', endereco });
     } catch (error) {
-        return res.status(500).json({ erro: 'Erro ao atualizar endereço', detalhes: erro.message});
+        return res.status(500).json({ erro: 'Erro ao atualizar endereço', detalhes: err.message});
     }
 };
 
