@@ -121,7 +121,7 @@ Resposta **201**:
   "numero": "123",
   "cidade": "Maceió",
   "estado": "AL",
-  "usuarioId": 1
+  "idUsuario": 1
 }
 ```
 
@@ -132,7 +132,7 @@ Resposta **201**:
 {
   "descricao": "Pedido de teste",
   "valor": 59.9,
-  "usuarioId": 1
+  "idUsuario": 1
 }
 ```
 
