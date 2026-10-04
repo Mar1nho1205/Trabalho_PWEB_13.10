@@ -4,7 +4,7 @@ const apagar = require('../controles/apagar');
 const atualizar = require('../controles/atualizar');
 const listar = require('../controles/listar');
 
-router.get('/', listar.listarUsarios);
+router.get('/', listar.listarUsuarios);
 router.post('/', criar.criarUsuario);
 router.put('/:id', atualizar.atualizarUsuario);
 router.delete('/:id', apagar.apagarUsuario);
